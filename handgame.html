@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hand Gesture Game</title>
+</head>
+<body>
+    <h2>Hand Gesture Game</h2>
+    <video id="video" width="300" height="200" autoplay></video>
+    <br>
+    <canvas id="gameCanvas" width="400" height="300"></canvas>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/handpose"></script>
+    <script>
+        const video = document.getElementById("video");
+        const canvas = document.getElementById("gameCanvas");
+        const ctx = canvas.getContext("2d");
+
+        let playerX = 180;
+
+        async function setupCamera() {
+            const stream = await navigator.mediaDevices.getUserMedia({ video: true });
+            video.srcObject = stream;
+        }
+
+        async function main() {
+            await setupCamera();
+            const model = await handpose.load();
+
+            async function detect() {
+                const predictions = await model.estimateHands(video);
+
+                if (predictions.length > 0) {
+                    const finger = predictions[0].landmarks[8];
+                    const x = finger[0];
+                    playerX = (x / video.videoWidth) * canvas.width;
+                }
+
+                drawGame();
+                requestAnimationFrame(detect);
+            }
+            detect();
+        }
+
+        function drawGame() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.fillStyle = "lime";
+            ctx.fillRect(playerX, 250, 40, 40);
+        }
+
+        main();
+    </script>
+</body>
+</html>
