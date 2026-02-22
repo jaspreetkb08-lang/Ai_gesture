@@ -1,4 +1,4 @@
-# ✋ AI Hand Gesture Games (TensorFlow.js)
+#  AI Hand Gesture Games (TensorFlow.js)
 
 This repository contains two browser-based AI games controlled using real-time hand gestures via webcam.
 
@@ -8,34 +8,29 @@ Built using:
 - HTML5 Canvas
 - JavaScript
 
----
-
-## 🎮 1️⃣ AI Hand Gesture Paddle Game
+## AI Hand Gesture Paddle Game
 
 Control a paddle using your index finger.
 
-### 🚀 Features
+### Features
 - Real-time hand tracking
 - Smooth paddle movement
 - Black UI theme
 - Webcam-based controls
 - Works directly in browser
 
-### 🕹 How to Play
+#### How to Play
 1. Allow camera access.
 2. Move your index finger left and right.
 3. The paddle follows your finger.
 
-### 📂 File
+### File
 `hand-gesture-game.html`
-
----
-
-## 🚗 2️⃣ AI Gesture Car Racing Game
+##  AI Gesture Car Racing Game
 
 Control a racing car using your index finger.
 
-### 🚀 Features
+### Features
 - Real-time AI hand tracking
 - Mirror correction (no reverse controls)
 - Smooth movement
@@ -44,7 +39,7 @@ Control a racing car using your index finger.
 - Dynamic enemy spawning
 - Clean black neon theme
 
-### 🕹 How to Play
+### How to Play
 1. Allow camera access.
 2. Move your index finger left and right.
 3. Avoid hitting the red enemy car.
@@ -53,9 +48,7 @@ Control a racing car using your index finger.
 ### 📂 File
 `gesture-racing-game.html`
 
----
-
-## 🛠 Technologies Used
+##  Technologies Used
 
 - TensorFlow.js
 - @tensorflow-models/handpose
@@ -65,7 +58,7 @@ Control a racing car using your index finger.
 
 ---
 
-## ⚠️ Requirements
+## Requirements
 
 - Run on **localhost** or **HTTPS**
 - Chrome browser recommended
@@ -74,7 +67,7 @@ Control a racing car using your index finger.
 
 ---
 
-## ▶️ How to Run
+## How to Run
 
 ### Option 1: Open Directly
 Just open the HTML file in a browser.
@@ -88,14 +81,14 @@ If using VS Code:
 
 ---
 
-## 📸 Demo
+## Demo
 
-Move your finger 👆  
-Game reacts in real time 🤖  
+Move your finger   
+Game reacts in real time 
 
 ---
 
-## 💡 Future Improvements
+## Future Improvements
 
 - Multiple enemies
 - Difficulty levels
@@ -107,12 +100,12 @@ Game reacts in real time 🤖
 
 ---
 
-## 📜 License
+## License
 
 This project is open-source and free to use.
 
 ---
 
-## 🙌 Author
+##  Author
 
-Made with ❤️ using AI + JavaScript
+Made with  using AI + JavaScript
